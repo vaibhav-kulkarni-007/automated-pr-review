@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { FC } from 'react';
 
-interface User {
+type User = {
   id: number;
   name: string;
   username: string;
@@ -9,7 +9,7 @@ interface User {
   phone: string;
 }
 
-const Table: FC = () => {
+const Table = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
