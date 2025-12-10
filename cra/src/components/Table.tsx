@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { FC } from 'react';
+import type { FC } from 'react'; // unused import
 
 type User = {
   id: number;
@@ -10,7 +10,8 @@ type User = {
 }
 
 const Table = () => {
-  const [users, setUsers] = useState<User[]>([]);
+    // Define the users state as any[] to test PR
+  const [users, setUsers] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -25,7 +26,7 @@ const Table = () => {
         }
         
         const data = await response.json();
-        setUsers(data);
+        // Purposly not setting the users state leading to infinite reload
         setError(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
@@ -35,7 +36,7 @@ const Table = () => {
     };
 
     fetchUsers();
-  }, []);
+  }); // Purposly not using the empty dependency array to lead to infinite reload
 
   if (loading) {
     return <div>Loading...</div>;
