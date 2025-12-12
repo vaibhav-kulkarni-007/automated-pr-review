@@ -24,6 +24,15 @@ jobs:
 
             Please review this pull request with a focus on:
             - Code quality and best practices
+            - Code readability and maintainability
+            - Code performance and efficiency
+            - Code security and compliance
+            - Code documentation and comments
+            - Code test coverage and quality
+            - Code refactoring and optimization
+            - Code architecture and design
+            - Code performance and efficiency
+            - Code security and compliance
             - Potential bugs or issues
             - Security implications
             - Performance considerations
