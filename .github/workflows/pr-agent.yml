@@ -31,8 +31,6 @@ jobs:
             - Code test coverage and quality
             - Code refactoring and optimization
             - Code architecture and design
-            - Code performance and efficiency
-            - Code security and compliance
             - Potential bugs or issues
             - Security implications
             - Performance considerations
