@@ -59,6 +59,7 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
+            {/* TODO - Add user type as any and make incorrect object access user.myId, user.myName etc */}
           {users.map((user) => (
             <tr key={user.id} style={{ borderBottom: '1px solid #ddd' }}>
               <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.id}</td>
