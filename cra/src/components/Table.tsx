@@ -11,7 +11,7 @@ type User = {
 
 const Table = () => {
     // Define the users state as any[] to test PR
-  const [users, setUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,10 +60,10 @@ const Table = () => {
         </thead>
         <tbody>
             {/* TODO - Add user type as any and make incorrect object access user.myId, user.myName etc */}
-          {users.map((user) => (
+          {users.map((user:any) => (
             <tr key={user.id} style={{ borderBottom: '1px solid #ddd' }}>
-              <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.id}</td>
-              <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.name}</td>
+              <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.myId}</td>
+              <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.myName}</td>
               <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.username}</td>
               <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.email}</td>
               <td style={{ padding: '12px', border: '1px solid #ddd' }}>{user.phone}</td>
