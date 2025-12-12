@@ -31,11 +31,11 @@ jobs:
             - Code test coverage and quality
             - Code refactoring and optimization
             - Code architecture and design
-            - Code performance and efficiency
-            - Code security and compliance
             - Potential bugs or issues
             - Security implications
             - Performance considerations
+            - Add pull request summary and feedback to the pull request description only once
+            - Don't add a comment for a change that is already done and committed. 
 
             Note: The PR branch is already checked out in the current working directory.
 
